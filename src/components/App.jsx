@@ -1,7 +1,24 @@
 import React from 'react';
 
-const App = ({ name }: { name: string }) => <h1>{name}</h1>;
+class App extends React.Component {
+  state = {
+    name: 'wg'
+  };
+
+  toggleName = () => {
+    this.setState({
+      name: this.state.name == 'wg' ? 'DG' : 'wg'
+    });
+  };
+
+  render = () => {
+    return (
+      <div>
+        <h1>{this.state.name}</h1>
+        <button onClick={this.toggleName}>toggle</button>
+      </div>
+    );
+  };
+}
 
 export default App;
-
-module.hot.accept();
