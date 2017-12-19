@@ -3,58 +3,58 @@ const webpack = require('webpack');
 const htmlPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.jsx',
+	entry: './src/index.jsx',
 
-  output: {
-    path: path.join(__dirname, '/dist'),
-    filename: '[hash].bundle.js'
-  },
+	output: {
+		path: path.join(__dirname, '/dist'),
+		filename: '[hash].bundle.js',
+	},
 
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
+	resolve: {
+		extensions: ['.js', '.jsx'],
+	},
 
-  devtool: 'inline-source-maps',
-  devServer: {
-    contentBase: './dist'
-  },
+	devtool: 'inline-source-maps',
+	devServer: {
+		contentBase: './dist',
+	},
 
-  module: {
-    rules: [
-      {
-        test: /\.jsx$/,
-        exclude: '/node_modules',
-        use: {
-          loader: 'babel-loader'
-        }
-      },
-      {
-        test: /\.scss/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true
-            }
-          }
-        ]
-      }
-    ]
-  },
+	module: {
+		rules: [
+			{
+				test: /\.jsx$/,
+				exclude: '/node_modules',
+				use: {
+					loader: 'babel-loader',
+				},
+			},
+			{
+				test: /\.scss/,
+				use: [
+					{
+						loader: 'style-loader',
+					},
+					{
+						loader: 'css-loader',
+						options: {
+							sourceMap: true,
+						},
+					},
+					{
+						loader: 'sass-loader',
+						options: {
+							sourceMap: true,
+						},
+					},
+				],
+			},
+		],
+	},
 
-  plugins: [
-    new htmlPlugin({
-      filename: 'index.html',
-      template: 'src/index.html'
-    })
-  ]
+	plugins: [
+		new htmlPlugin({
+			filename: 'index.html',
+			template: 'src/index.html',
+		}),
+	],
 };

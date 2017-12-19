@@ -7,7 +7,7 @@ import App from './App';
 Enzyme.configure({ adapter: new Adapter() });
 
 test('App component', () => {
-  var AppWrapper = Enzyme.shallow(React.createElement(App));
+  const AppWrapper = Enzyme.shallow(React.createElement(App));
 
   expect(AppWrapper.find('h1').text()).toBe('wg');
 
