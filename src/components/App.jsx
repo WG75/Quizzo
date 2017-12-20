@@ -1,13 +1,14 @@
 import React from 'react';
+import styles from './style.scss';
 
 class App extends React.Component {
   state = {
-    name: 'wg',
+    name: 'wg'
   };
 
   toggleName = () => {
     this.setState({
-      name: this.state.name === 'wg' ? 'DG' : 'wg',
+      name: this.state.name === 'wg' ? 'DG' : 'wg'
     });
   };
 
