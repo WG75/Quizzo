@@ -7,14 +7,7 @@ import App from './App';
 Enzyme.configure({ adapter: new Adapter() });
 
 test('App component', () => {
-  const AppWrapper = Enzyme.shallow(React.createElement(App));
+  const AppWrapper = Enzyme.shallow(React.createElement(App, { name: 'yay' }));
 
-  expect(AppWrapper.find('h1').text()).toBe('wg');
-
-  AppWrapper.find('button').simulate('click');
-
-  expect(AppWrapper.find('h1').text()).toBe('DG');
-
-  AppWrapper.find('button').simulate('click');
-  expect(AppWrapper.find('h1').text()).toBe('DG');
+  expect(AppWrapper.find('h1').text()).toBe('yay');
 });
