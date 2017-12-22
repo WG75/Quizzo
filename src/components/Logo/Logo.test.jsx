@@ -7,7 +7,7 @@ import Logo from './Logo';
 Enzyme.configure({ adapter: new Adapter() });
 
 test('Logo component', () => {
-  let wrapper = shallow(<Logo />);
+  const wrapper = shallow(<Logo />);
 
   expect(wrapper.find('.fa.fa-question-circle').length).toBe(1);
   expect(wrapper.find('span').props().children).toBe('uizzo');
