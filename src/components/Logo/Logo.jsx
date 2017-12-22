@@ -1,13 +1,13 @@
 // @flow
 
-import React from 'react';
+import React, { Node } from 'react';
 
-import './logo.scss';
+import classes from './logo.scss';
 
-const Logo = () => (
-  <div>
+const Logo = (): Node => (
+  <div className={classes.logo}>
     <i className="fa fa-question-circle" />
-    <span>uizzo</span>
+    <span className={classes.logoText}>uizzo</span>
   </div>
 );
 

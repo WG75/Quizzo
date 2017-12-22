@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.logo {
+  font-size: 48px;
+  font-weight: 900;
+  color: $tertiary;
+  line-height: 1;
+}
+
+.logoText {
+  display: inline-block;
+  margin-left: 5px;
+  color: $secondary;
+}
