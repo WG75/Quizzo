@@ -1,7 +1,8 @@
 // @flow
 
 import React from 'react';
+import Logo from './Logo/Logo';
 
-const App = ({ name }: { name: string }) => <h1>{name}</h1>;
+const App = () => <Logo />;
 
 export default App;

@@ -3,11 +3,12 @@ import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme';
 
 import App from './App';
+import Logo from './Logo/Logo';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 test('App component', () => {
-  const AppWrapper = Enzyme.shallow(React.createElement(App, { name: 'yay' }));
+  const AppWrapper = Enzyme.shallow(React.createElement(App));
 
-  expect(AppWrapper.find('h1').text()).toBe('yay');
+  expect(AppWrapper.contains(<Logo />)).toBe(true);
 });

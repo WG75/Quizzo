@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
     "flow": "flow",
     "build": "webpack",
     "build:watch": "webpack --watch",
