@@ -41,6 +41,7 @@
     "eslint-plugin-react": "^7.5.1",
     "flow-bin": "^0.61.0",
     "html-webpack-plugin": "^2.30.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^22.0.0",
     "node-sass": "^4.7.2",
     "react-test-renderer": "^16.2.0",
@@ -55,7 +56,7 @@
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-        "<rootDir>/__mocks__/fileMock.js",
+        "<rootDir>/src/__mocks__/fileMock.js",
       "\\.(css|scss)$": "identity-obj-proxy"
     }
   }
