@@ -1,11 +1,8 @@
 import React from 'react';
-import Adapter from 'enzyme-adapter-react-16';
-import Enzyme from 'enzyme';
+import Enzyme from '../__tests__/enzyme';
 
 import App from './App';
 import Logo from './Logo/Logo';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 test('App component', () => {
   const AppWrapper = Enzyme.shallow(React.createElement(App));
