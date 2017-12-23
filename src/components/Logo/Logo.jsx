@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Node } from 'react';
+import React, { type Node } from 'react';
 
 import classes from './logo.scss';
 
