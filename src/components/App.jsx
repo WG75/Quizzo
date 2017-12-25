@@ -4,6 +4,6 @@ import React from 'react';
 import Logo from './Logo/Logo';
 import Button from './Button/Button';
 
-const App = () => <Button>yay</Button>;
+const App = () => <Button>take the quiz</Button>;
 
 export default App;

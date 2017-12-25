@@ -3,6 +3,8 @@
 import React, { type Node } from 'react';
 import { Link } from 'react-router-dom';
 
+import classes from './button.scss';
+
 type props = {
   className: string,
   onClick: () => void,
@@ -13,11 +15,14 @@ type props = {
 
 const Button = ({ className, onClick, isLink, path, children }: props) =>
   isLink ? (
-    <Link className={className} to={path}>
+    <Link
+      className={`${classes.primary} ${classes.isLink} ${className}`}
+      to={path}
+    >
       {children}
     </Link>
   ) : (
-    <button className={className} onCLick={onClick}>
+    <button className={`${classes.primary} ${className}`} onClick={onClick}>
       {children}
     </button>
   );
