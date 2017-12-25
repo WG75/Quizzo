@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 import classes from './button.scss';
 
 type props = {
-  className: string,
-  onClick: () => void,
-  isLink: boolean,
-  path: string,
+  className?: string,
+  onClick?: () => void,
+  isLink?: boolean,
+  path?: string,
   children: Node
 };
 
@@ -28,5 +28,12 @@ const Button = ({
       {children}
     </button>
   ));
+
+Button.defaultProps = {
+  className: '',
+  isLink: false,
+  path: '/',
+  onClick: () => undefined,
+};
 
 export default Button;

@@ -30,11 +30,7 @@ describe('Button component', () => {
   });
 
   it('renders a Link component and pass path to it', () => {
-    wrapper = Enzyme.shallow(
-      <Button isLink path="/">
-        yay
-      </Button>
-    );
+    wrapper = Enzyme.shallow(<Button isLink path="/">yay</Button>);
 
     expect(wrapper.find('Link').length).toBe(1);
     expect(wrapper.find('Link').props().to).toBe('/');
