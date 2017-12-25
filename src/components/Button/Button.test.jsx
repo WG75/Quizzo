@@ -1,6 +1,7 @@
-import Enzyme from '../../__tests__/enzyme';
+// @flow
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Enzyme from '../../__tests__/enzyme';
 import Button from './Button';
 
 describe('Button component', () => {
@@ -30,7 +31,7 @@ describe('Button component', () => {
 
   it('renders a Link component and pass path to it', () => {
     wrapper = Enzyme.shallow(
-      <Button isLink={true} path={'/'}>
+      <Button isLink path="/">
         yay
       </Button>
     );

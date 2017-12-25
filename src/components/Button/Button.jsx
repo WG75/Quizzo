@@ -13,8 +13,10 @@ type props = {
   children: Node
 };
 
-const Button = ({ className, onClick, isLink, path, children }: props) =>
-  isLink ? (
+const Button = ({
+  className, onClick, isLink, path, children,
+}: props) =>
+  (isLink ? (
     <Link
       className={`${classes.primary} ${classes.isLink} ${className}`}
       to={path}
@@ -25,6 +27,6 @@ const Button = ({ className, onClick, isLink, path, children }: props) =>
     <button className={`${classes.primary} ${className}`} onClick={onClick}>
       {children}
     </button>
-  );
+  ));
 
 export default Button;
