@@ -24,7 +24,7 @@ describe('Button component', () => {
     const clickHandlerMock = jest.fn();
 
     wrapper = Enzyme.shallow(<Button onClick={clickHandlerMock}>yay</Button>);
-    wrapper.props().onCLick();
+    wrapper.props().onClick();
 
     expect(clickHandlerMock.mock.calls.length).toBe(1);
   });

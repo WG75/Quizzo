@@ -8,5 +8,5 @@ import App from './App';
 test('App component', () => {
   const AppWrapper = Enzyme.shallow(React.createElement(App));
 
-  expect(AppWrapper.find('Button').length).toBe(1);
+  expect(AppWrapper.find('Home').length).toBe(1);
 });
