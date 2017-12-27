@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typo.scss";
+
+
+.home {
+
+}
+
+.keyFeatures {
+    margin-top: 30px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    @media  screen and (min-width: 600px) {
+        text-align: center;
+    }
+
+}
+
+.featuresList {
+    text-align: left;
+    display: inline-block;
+}
+
+.featureItem {
+    line-height: 30px;
+    color: $tertiary-dark;
+    font-size: 14px;
+}
+
+.heading {
+    font-size: 16px;
+    line-height: 30px;
+    color: $secondary-dark;
+    margin-bottom: 18px;
+}
+
+.icon {
+    color: $secondary-dark;
+    margin-right: 10px;
+}
+
+.desktopBtn {
+    display: none;
+}
+
+.imageContainer {
+    position: relative;
+}  
+
+.image {
+    display: block;
+    @media  screen and (min-width: 600px) {
+        border: 6px solid $white;
+        border-radius: 10px
+    }
+
+}
+
+.mobileBtn {
+    position: absolute;
+    bottom: 7px;
+    left: calc(50% - 166px/2)
+}
