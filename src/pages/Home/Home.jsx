@@ -7,6 +7,7 @@ import classes from './home.scss';
 const Home = () => (
   <section className={classes.home}>
     <div className={classes.keyFeatures}>
+      <div className={classes.featuresWrapper}>
       <h1 class={classes.heading}>A Trivia App That Feeds Your Brain</h1>
 
       <ul className={classes.featuresList}>
@@ -17,6 +18,8 @@ const Home = () => (
       </ul>
 
       <Button className={classes.desktopBtn}>take the quiz</Button>
+
+      </div>
 
       <div className={classes.polygon} />
     </div>

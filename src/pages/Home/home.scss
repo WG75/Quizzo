@@ -1,63 +1,139 @@
-@import "../../styles/variables.scss";
-@import "../../styles/typo.scss";
-
+@import '../../styles/variables.scss';
+@import '../../styles/typo.scss';
 
 .home {
+    position: relative;
 
+  margin-top: 30px;
+  @media screen and (min-width: $breakpoint-md) {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0;
+  }
 }
 
 .keyFeatures {
-    margin-top: 30px;
+  @media screen and (max-width: $breakpoint-md - 1) {
     margin-left: 25px;
     margin-bottom: 30px;
-    @media  screen and (min-width: 600px) {
-        text-align: center;
-    }
+  }
 
+  @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+    text-align: center;
+  }
+  order: 2;
+  align-self: center;
+
+  @media screen and (min-width: $breakpoint-md) {
+    text-align: right;
+    width: 50%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    text-align: center;
+  }
+}
+
+.featuresWrapper {
+  display: inline-block;
+  text-align: left;
+
+  @media screen and (min-width: 1024px) {
+    text-align: center;
+  }
 }
 
 .featuresList {
-    text-align: left;
-    display: inline-block;
+  text-align: left;
+  display: inline-block;
 }
 
 .featureItem {
-    line-height: 30px;
-    color: $tertiary-dark;
-    font-size: 14px;
+  line-height: 30px;
+  color: $tertiary-dark;
+  font-size: 14px;
+  @media screen and (min-width: $breakpoint-lg) {
+    font-size: 16px;
+  }
 }
 
 .heading {
-    font-size: 16px;
-    line-height: 30px;
-    color: $secondary-dark;
-    margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 30px;
+  color: $secondary-dark;
+  margin-bottom: 18px;
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    font-size: 24px;
+  }
 }
 
 .icon {
-    color: $secondary-dark;
-    margin-right: 10px;
+  color: $secondary-dark;
+  margin-right: 10px;
 }
 
 .desktopBtn {
-    display: none;
+  display: none;
+  margin-top: 40px;
+  @media screen and (min-width: $breakpoint-md) {
+    display: block;
+  }
+  @media screen and (min-width: 1024px) {
+    margin: 40px auto 0;
+  }
 }
 
 .imageContainer {
-    position: relative;
-}  
+  position: relative;
+  @media screen and (max-width: $breakpoint-md) {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    width: 50%;
+  }
+}
 
 .image {
-    display: block;
-    @media  screen and (min-width: 600px) {
-        border: 6px solid $white;
-        border-radius: 10px
-    }
+  display: block;
+  @media screen and (min-width: $breakpoint-sm) {
+    border: 6px solid $white;
+    border-radius: 10px;
+  }
 
+  @media screen and (min-width: $breakpoint-md) {
+    width: 405px;
+  }
 }
 
 .mobileBtn {
-    position: absolute;
-    bottom: 7px;
-    left: calc(50% - 166px/2)
+  position: absolute;
+  bottom: 3px;
+  left: calc(50% - 166px / 2);
+  @media screen and (min-width: $breakpoint-sm) {
+    bottom: 10px;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    display: none;
+  }
 }
+
+
+// .polygon {
+//     @media screen and (min-width: $breakpoint-lg) {
+//         width: 600px;
+//         height: 600px;
+//         background: #000;
+//         position: absolute;
+//         top: -50px;
+//         opacity: 0.2;
+//         pointer-events: none;
+//     }
+    
+//}

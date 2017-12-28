@@ -1,17 +1,29 @@
-@import "../styles/variables.scss";
-@import "../styles/typo.scss";
-
+@import '../styles/variables.scss';
+@import '../styles/typo.scss';
 
 .header {
-    height: 80px;
+  height: 80px;
 }
 
 .logo {
-    line-height: 80px;
-    margin-left: 20px;
+  line-height: 80px;
+  margin-left: 20px;
 }
 
 .container {
-    max-width: 600px;
+  max-width: 1200px;
+  background: $shark;
+  @media screen and (min-width: $breakpoint-md) {
+    margin: 0 40px;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    margin: 0 70px;
+  }
+  @media screen and (min-width: 1280px) {
     margin: 0 auto;
+
+  }
+
+
 }
