@@ -8,6 +8,9 @@
 .logo {
   line-height: 80px;
   margin-left: 20px;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-left: 50px;
+  }
 }
 
 .container {
