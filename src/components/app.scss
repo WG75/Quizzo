@@ -13,6 +13,14 @@
 .container {
   max-width: 1200px;
   background: $shark;
+
+  @media screen and (min-height: $breakpoint-md) {
+    display: flex;
+    min-height: calc(100vh - 80px);
+    align-items: center;
+
+  }
+
   @media screen and (min-width: $breakpoint-md) {
     margin: 0 40px;
   }
