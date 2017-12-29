@@ -16,7 +16,7 @@ module.exports = {
 
   //   devtool: 'inline-source-maps',
   devServer: {
-    contentBase: './dist'
+    contentBase: './static'
   },
 
   module: {

@@ -1,0 +1,25 @@
+@import '../../styles/typo.scss';
+@import '../../styles/variables.scss';
+
+.primary {
+  @include Roboto-bold;
+  line-height: 52px;
+  font-size: 16px;
+  min-width: 166px;
+  background: $secondary;
+  color: $primary;
+  border: 2px solid $primary;
+  border-radius: 25px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background: $primary;
+    border-color: $secondary;
+    color: $secondary;
+  }
+}
+
+.isLink {
+  cursor: none;
+}

@@ -1,0 +1,24 @@
+// colors
+$shark: #2a2c34;
+$feijoa: #8fd58c;
+$amulet: #7d9e77;
+$athens-gray: #eef1f3;
+$santas-gray: #9fa1a7;
+$trout: #494c59;
+
+$white: #fff;
+$black: #000;
+
+$primary: $shark;
+$primary-light: $trout;
+$secondary: $feijoa;
+$secondary-dark: $amulet;
+$tertiary: $athens-gray;
+$tertiary-dark: $santas-gray;
+
+//breakpoints
+$breakpoint-tiny: 320px;
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1152px;
+$breakpoint-xl: 1920px;

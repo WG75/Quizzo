@@ -1,11 +1,9 @@
-// @flow
-
 import React from 'react';
 import { render } from 'react-dom';
 import App from './components/App';
 
 import './styles/main.scss';
 
-render(<App name="yay" />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
 
 module.hot.accept();

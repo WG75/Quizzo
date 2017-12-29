@@ -1,0 +1,38 @@
+@import './typo.scss';
+
+body {
+  @include Roboto;
+  font-size: 16px;
+  line-height: 1em;
+  overflow-x: hidden; 
+}
+
+h1,
+h2,
+h3 {
+  line-height: 30px;
+}
+
+h1 {
+  @include Roboto-black;
+}
+
+h2 {
+  @include Roboto-black;
+}
+
+h3 {
+  @include Roboto-black;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active,
+button,
+button:focus {
+  outline: 0;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+}

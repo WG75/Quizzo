@@ -1,5 +1,12 @@
 @import 'minireset.css';
+@import './variables.scss';
+@import './typo.scss';
+@import './default.scss';
 
 body {
-  background: yellow;
+  background: $primary;
+}
+
+h1 {
+  color: $secondary;
 }

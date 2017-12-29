@@ -1,7 +1,23 @@
 // @flow
 
 import React from 'react';
+import Logo from './Logo/Logo';
+import Home from '../pages/Home/Home';
 
-const App = ({ name }: { name: string }) => <h1>{name}</h1>;
+import classes from './app.scss';
+
+const App = () => (
+  <div className={classes.content}>
+    <header className={classes.header}>
+      <Logo className={classes.logo} />
+    </header>
+
+    <main className={classes.container}>
+      <Home />
+    </main>
+
+    <div className={classes.circle} />
+  </div>
+);
 
 export default App;
