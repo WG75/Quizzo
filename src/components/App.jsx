@@ -15,6 +15,8 @@ const App = () => (
     <main className={classes.container}>
       <Home />
     </main>
+
+    <div className={classes.circle} />
   </div>
 );
 

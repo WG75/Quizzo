@@ -4,6 +4,7 @@ body {
   @include Roboto;
   font-size: 16px;
   line-height: 1em;
+  overflow-x: hidden; 
 }
 
 h1,
