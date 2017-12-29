@@ -2,7 +2,9 @@
 @import '../../styles/typo.scss';
 
 .home {
+  width: 100%;
   margin-top: 30px;
+
   @media screen and (min-width: $breakpoint-md) {
     display: flex;
     justify-content: space-between;
@@ -12,10 +14,12 @@
   @media screen and (min-width: $breakpoint-lg) {
     margin: 80px 0;
   }
-  width: 100%;
 }
 
 .keyFeatures {
+  order: 1;
+  align-self: center;
+
   @media screen and (max-width: $breakpoint-md - 1) {
     margin-left: 25px;
     margin-bottom: 30px;
@@ -24,8 +28,6 @@
   @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
     text-align: center;
   }
-  order: 2;
-  align-self: center;
 
   @media screen and (min-width: $breakpoint-md) {
     text-align: right;
@@ -93,6 +95,7 @@
 
 .imageContainer {
   position: relative;
+ 
   @media screen and (max-width: $breakpoint-md) {
     max-width: 480px;
     margin: 0 auto;
@@ -141,5 +144,3 @@
     transform: rotate(45deg);
   }
 }
-
-
