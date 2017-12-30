@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import Enzyme from '../../__tests__/enzyme';
+import Enzyme from '../../utils/enzyme';
 
 import Home from './Home';
 
