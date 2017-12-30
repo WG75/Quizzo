@@ -37,14 +37,14 @@ const Home = () => (
           </li>
         </ul>
 
-        <Button className={classes.desktopBtn}>take the quiz</Button>
+        <Button className={classes.desktopBtn} isLink path="/form">take the quiz</Button>
         <div className={classes.polygon} />
       </div>
     </div>
 
     <div className={classes.imageContainer}>
       <img className={classes.image} src="./girl.jpg" alt="a girl reading book flying in the sky" />
-      <Button className={classes.mobileBtn}>take the quiz</Button>
+      <Button className={classes.mobileBtn} isLink path="/form">take the quiz</Button>
     </div>
   </section>
 );
