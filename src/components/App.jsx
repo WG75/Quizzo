@@ -4,6 +4,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Logo from './Logo/Logo';
 import Home from '../pages/Home/Home';
+import Form from '../pages/Form/Form';
 
 import classes from './app.scss';
 
@@ -21,7 +22,11 @@ const App = () => (
           </Route>
 
           <Route path="/form">
-            <div className={classes.circle} />
+          <div>
+          <div className={classes.circle} />
+            <Form />
+
+          </div>
           </Route>
         </Switch>
       </main>
