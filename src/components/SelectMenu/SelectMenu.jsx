@@ -43,6 +43,7 @@ export default class SelectMenu extends React.Component<Props, State> {
     return (
       <div className={classes.wrapper}>
         <select
+          className={classes.nativeSelect}
           name={id}
           id={id}
           onChange={(e) => {
@@ -64,7 +65,8 @@ export default class SelectMenu extends React.Component<Props, State> {
           <span className={classes.selectedValue}>
             {options[this.state.selectedIndex]}
           </span>
-          <i>icon</i>
+          <i className={`${classes.arrow} fa fa-chevron-down`} aria-hidden="true"></i>
+
         </div>
       </div>
     );
