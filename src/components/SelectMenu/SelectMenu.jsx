@@ -65,7 +65,7 @@ export default class SelectMenu extends React.Component<Props, State> {
           <span className={classes.selectedValue}>
             {options[this.state.selectedIndex]}
           </span>
-          <i className={`${classes.arrow} fa fa-chevron-down`} aria-hidden="true"></i>
+          <i className={`${classes.arrow} fa fa-chevron-down`} aria-hidden="true" />
 
         </div>
       </div>

@@ -16,7 +16,7 @@ describe('SelectMenu component', () => {
     onChange={onChangeMock}
   />);
 
-  it('it renders option tag for each passed option', () => {
+  it('renders option tag for each passed option', () => {
     expect(wrapper.find('option').length).toBe(selectOptions.length);
   });
 
@@ -50,7 +50,7 @@ describe('SelectMenu component', () => {
   });
 
   // making sure that onChange prop handler is called with the right props upon state change.
-  it('it calls onChange prop handler when state changes giving it the new value & id as arguments', () => {
+  it('calls onChange prop handler when state changes giving it the new value & id as arguments', () => {
     expect(onChangeMock.mock.calls.length).toBe(1);
     expect(onChangeMock.mock.calls[0][0]).toBe('diffculty');
     expect(onChangeMock.mock.calls[0][1]).toBe('medium');
