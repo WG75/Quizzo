@@ -1,0 +1,45 @@
+@import '../../styles/typo.scss';
+@import '../../styles/variables.scss';
+
+
+.wrapper {
+    position: relative;
+    height: 30px;
+    width: 286px;
+    @media screen and (min-width: $breakpoint-md) {
+        width: 70% //temp
+    }
+}
+
+.nativeSelect,
+.clickThrough {
+    width: 100%;
+    height: 100%;
+}
+
+.clickThrough {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    line-height: 30px;
+    background: $tertiary-dark;
+    border: 1px solid $tertiary;
+}   
+
+.selectedValue {
+    @include Roboto-bold;
+    color: $primary;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 8px;
+
+}
+
+.arrow {
+    line-height: 30px;
+    position: absolute;
+    right: 10px;
+    font-size: 14px;
+    color: $primary;
+}

@@ -1,7 +1,8 @@
-// @flow 
+// @flow
 
 import React from 'react';
-import TextInput from '../../components/TextInput/TextInput'
+// import TextInput from '../../components/TextInput/TextInput'
+import SelectMenu from '../../components/SelectMenu/SelectMenu';
 import classes from './form.scss';
 
 
@@ -18,11 +19,11 @@ export default class Form extends React.Component<Props, State> {
 
     }
 
-    render () {
-        return (
-            <form>
-                <TextInput id="num" onChange={() => console.log(this.state)} label="number of question"/>
-            </form>
-        )
+    render() {
+      return (
+        <form>
+          <SelectMenu className="diff" options={['easy', 'hard', 'medium', 'easy', 'hard', 'medium']} defaultSelected={2} id="diffculty" />
+        </form>
+      );
     }
 }

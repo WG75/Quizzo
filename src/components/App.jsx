@@ -22,11 +22,11 @@ const App = () => (
           </Route>
 
           <Route path="/form">
-          <div>
-          <div className={classes.circle} />
-            <Form />
+            <div>
+              <div className={classes.circle} />
+              <Form />
 
-          </div>
+            </div>
           </Route>
         </Switch>
       </main>

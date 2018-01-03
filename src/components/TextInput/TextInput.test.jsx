@@ -13,7 +13,7 @@ describe('TextInput component', () => {
   it('render input element and pass props to it', () => {
     expect(wrapper.find('input').length).toBe(1);
     expect(wrapper.find('input').props().id).toBe('name');
-    expect(wrapper.find('span').props().children).toBe('username');
+    expect(wrapper.find('span').props().children[0]).toBe('username');
   });
 
   it('it sets state when onChange event is triggered', () => {
@@ -31,7 +31,7 @@ describe('TextInput component', () => {
   });
 
   // making sure that onChange handler is called with the right props upon state change.
-  it('it fires onChange handler when state changes giving it the new value & id as arguments', () => {
+  it('it fires onChange prop handler when state changes giving it the new value & id as arguments', () => {
     expect(onChangeMockFun.mock.calls.length).toBe(1);
     expect(onChangeMockFun.mock.calls[0][0]).toBe('name');
     expect(onChangeMockFun.mock.calls[0][1]).toBe('new value');
