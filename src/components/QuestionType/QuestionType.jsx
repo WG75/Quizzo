@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-// import classes from './question-type.scss';
+import classes from './question-type.scss';
 
 type Props = {
     value: string,
@@ -13,10 +13,10 @@ type Props = {
 const QuestionType = ({
   value, onChange, className, checked,
 }: Props) => (
-  <label className={`${className}`} htmlFor={value}>
-    <span>{value}</span>
-    <input type="radio" name="type" value={value} id={value} onChange={onChange} checked={checked} />
-  </label>
+  <label className={`${classes.questionType} ${className}`} htmlFor={value}>
+    <input className={classes.nativeInput} type="radio" name="type" value={value} id={value} onChange={onChange} checked={checked} />
+    <span className={classes.type}>{value}</span>
+ </label>
 );
 
 export default QuestionType;

@@ -1,0 +1,41 @@
+@import '../../styles/typo.scss';
+@import '../../styles/variables.scss';
+
+.questionType {
+    margin: 0 10px;
+}
+
+.type {
+    @include Roboto-bold;
+    color: $tertiary-dark;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+        background: $tertiary-dark;
+        border: 2px solid $tertiary;
+        border-radius: 50%;
+        vertical-align: middle;
+        
+    
+    }
+}
+
+.nativeInput {
+    position: absolute;
+    left: -1000px;
+
+    &:checked {
+
+       + .type:before {
+            background: $secondary-dark;
+        }
+    }
+}
