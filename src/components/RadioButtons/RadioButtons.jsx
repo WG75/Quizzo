@@ -42,7 +42,7 @@ export default class RadioButtons extends React.Component<Props, State> {
             key={value}
             value={value}
             checked={this.state.checkedIndex === key}
-            onClick={() => this.handleChange(key)}
+            onChange={() => this.handleChange(key)}
             className={labelClass}
           />
         ))}
