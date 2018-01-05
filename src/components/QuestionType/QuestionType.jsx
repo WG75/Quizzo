@@ -16,7 +16,7 @@ const QuestionType = ({
   <label className={`${classes.questionType} ${className}`} htmlFor={value}>
     <input className={classes.nativeInput} type="radio" name="type" value={value} id={value} onChange={onChange} checked={checked} />
     <span className={classes.type}>{value}</span>
- </label>
+  </label>
 );
 
 export default QuestionType;
