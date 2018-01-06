@@ -9,7 +9,7 @@ import QuestionType from './QuestionType';
 test('QuestionType component', () => {
   const onChangeMock = jest.fn();
 
-  const wrapper = Enzyme.shallow(<QuestionType value="multiple" onChange={onChangeMock} />);
+  const wrapper = Enzyme.shallow(<QuestionType className="type" value="multiple" onChange={onChangeMock} checked={false} />);
 
   wrapper.find('input').simulate('change');
 

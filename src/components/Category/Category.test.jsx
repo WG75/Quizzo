@@ -7,7 +7,7 @@ import Category from './Category';
 
 describe('Category component', () => {
   const onChangeMock = jest.fn();
-  const wrapper = Enzyme.shallow(<Category value="sports" onChange={onChangeMock} icon="futbol-o" />);
+  const wrapper = Enzyme.shallow(<Category value="sports" onChange={onChangeMock} icon="futbol-o" checked={false} />);
 
   it('renders correctly', () => {
     expect(wrapper.find('input').length).toBe(1);
