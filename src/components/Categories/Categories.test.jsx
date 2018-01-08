@@ -7,15 +7,10 @@ import Categories from './Categories';
 import Category from '../Category/Category';
 import Select from '../SelectMenu/SelectMenu';
 
+import categoriesData from '../../data/categories';
+
 describe('Categories component', () => {
-  const categoriesOpt = [
-    'sports',
-    'music',
-    'politics',
-    'religeon',
-    'history',
-    'other',
-  ];
+  const categoriesOpt: Array<{ value: string, icon: string }> = categoriesData;
   const extraOptions = ['software', 'hardware', 'chemistry'];
 
   const onChangeMock = jest.fn();
@@ -24,6 +19,7 @@ describe('Categories component', () => {
     options={categoriesOpt}
     extraCategories={extraOptions}
     onChange={onChangeMock}
+    id="category"
   />);
 
   it('renders category component for each passed option', () => {

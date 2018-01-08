@@ -7,12 +7,17 @@ import Category from './Category';
 
 describe('Category component', () => {
   const onChangeMock = jest.fn();
-  const wrapper = Enzyme.shallow(<Category value="sports" onChange={onChangeMock} icon="futbol-o" checked={false} />);
+  const wrapper = Enzyme.shallow(<Category
+    value="sports"
+    onChange={onChangeMock}
+    icon="futbol-o"
+    checked={false}
+  />);
 
   it('renders correctly', () => {
     expect(wrapper.find('input').length).toBe(1);
     expect(wrapper.find('i').length).toBe(1);
-    expect(wrapper.find('i').hasClass('fa-futbol-o')).toBe(true);
+    expect(wrapper.find('i').hasClass('futbol-o')).toBe(true);
 
     expect(wrapper.find('span').length).toBe(1);
     expect(wrapper.find('span').props().children).toBe('sports');

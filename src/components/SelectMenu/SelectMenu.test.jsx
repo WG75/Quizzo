@@ -10,6 +10,7 @@ describe('SelectMenu component', () => {
   const onChangeMock = jest.fn();
 
   const wrapper = Enzyme.shallow(<SelectMenu
+    className="select"
     options={selectOptions}
     defaultSelected={1}
     id="diffculty"

@@ -3,30 +3,29 @@
 import React from 'react';
 // import TextInput from '../../components/TextInput/TextInput'
 // import SelectMenu from '../../components/SelectMenu/SelectMenu';
-import RadioButtons from '../../components/RadioButtons/RadioButtons';
-import QuestionType from '../../components/QuestionType/QuestionType';
+// import RadioButtons from '../../components/RadioButtons/RadioButtons';
+// import QuestionType from '../../components/QuestionType/QuestionType';
+import Categories from '../../components/Categories/Categories';
+import categoriesData from '../../data/categories';
 // import classes from './form.scss';
 
+type Props = {};
 
-type Props = {
-
-}
-
-type State = {
-
-}
+type State = {};
 
 export default class Form extends React.Component<Props, State> {
-    state = {
+  state = {};
 
-    }
-
-
-    render() {
-      return (
-        <form>
-          <RadioButtons className="diff" id="type" options={['easy', 'hard', 'medium']} defaultChecked={1} Label={QuestionType} labelClass="q-type" onChange={(id: string, value: string) => console.log(id, value)} />
-        </form>
-      );
-    }
+  render() {
+    return (
+      <form>
+        <Categories
+          options={categoriesData}
+          onChange={(id: string, value: string) => console.log(id, value)}
+          extraCategories={['sports4', 'sports3', 'sports1']}
+          id="coma"
+        />
+      </form>
+    );
+  }
 }
