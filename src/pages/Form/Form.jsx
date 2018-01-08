@@ -2,48 +2,30 @@
 
 import React from 'react';
 // import TextInput from '../../components/TextInput/TextInput'
-import SelectMenu from '../../components/SelectMenu/SelectMenu';
-import RadioButtons from '../../components/RadioButtons/RadioButtons';
+// import SelectMenu from '../../components/SelectMenu/SelectMenu';
+// import RadioButtons from '../../components/RadioButtons/RadioButtons';
+// import QuestionType from '../../components/QuestionType/QuestionType';
+import Categories from '../../components/Categories/Categories';
+import categoriesData from '../../data/categories';
+// import classes from './form.scss';
 
-import classes from './form.scss';
+type Props = {};
 
-
-type Props = {
-
-}
-
-type State = {
-
-}
+type State = {};
 
 export default class Form extends React.Component<Props, State> {
-    state = {
+  state = {};
 
-    }
-
-
-    render() {
-      const MockLabel = (props: {
-        value: string,
-        checked: boolean,
-        name: string,
-        className: string,
-        onChange: () => void
-      }) => (
-        <input
-          className={props.className}
-          type="radio"
-          name="category"
-          value={props.value}
-          checked={props.checked}
-          onChange={props.onClick}
+  render() {
+    return (
+      <form>
+        <Categories
+          options={categoriesData}
+          onChange={(id: string, value: string) => console.log(id, value)}
+          extraCategories={['sports4', 'sports3', 'sports1']}
+          id="coma"
         />
-      );
-
-      return (
-        <form>
-          <RadioButtons className="diff" id="category" options={['easy', 'hard', 'medium']} defaultChecked={1} Label={MockLabel} labelClass="categoryItem" onChange={(id: string, value: string) => console.log(id, value)} />
-        </form>
-      );
-    }
+      </form>
+    );
+  }
 }

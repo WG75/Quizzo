@@ -4,6 +4,7 @@ import React from 'react';
 import classes from './select-menu.scss';
 
 type Props = {
+  className: string,
   options: Array<string>,
   defaultSelected: number,
   id: string,
@@ -11,7 +12,7 @@ type Props = {
 };
 
 type State = {
-    selectedIndex: number
+  selectedIndex: number
 };
 
 export default class SelectMenu extends React.Component<Props, State> {
@@ -28,20 +29,17 @@ export default class SelectMenu extends React.Component<Props, State> {
       },
       () => {
         if (this.props.onChange) {
-          this.props.onChange(
-            this.props.id,
-            options[index],
-          );
+          this.props.onChange(this.props.id, options[index]);
         }
       },
     );
   }
 
   render() {
-    const { id, options }: Props = this.props;
+    const { id, options, className }: Props = this.props;
 
     return (
-      <div className={classes.wrapper}>
+      <div className={`${classes.wrapper} ${className}`}>
         <select
           className={classes.nativeSelect}
           name={id}
@@ -65,8 +63,10 @@ export default class SelectMenu extends React.Component<Props, State> {
           <span className={classes.selectedValue}>
             {options[this.state.selectedIndex]}
           </span>
-          <i className={`${classes.arrow} fa fa-chevron-down`} aria-hidden="true" />
-
+          <i
+            className={`${classes.arrow} fa fa-chevron-down`}
+            aria-hidden="true"
+          />
         </div>
       </div>
     );

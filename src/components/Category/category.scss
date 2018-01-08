@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+@import '../../styles/typo.scss';
+
+.category {
+  display: inline-block;
+  text-align: center;
+  width: 68px;
+  height: 62px;
+  border: 2px solid $tertiary-dark;
+  vertical-align: top;
+  margin: 7px 16px;
+  color: $tertiary-dark;
+}
+
+.checked {
+  color: $secondary-dark;
+  border-color: $secondary-dark;
+}
+
+.nativeRadio {
+  position: absolute;
+  left: -1000px;
+}
+
+.icon {
+  display: inline-block;
+  width: 100%;
+  font-size: 24px;
+  margin: 9px 0 5px;
+}
+
+.label {
+  @include Roboto-bold;
+  font-size: 14px;
+}
+
+.other {
+  line-height: 24px; //tempo
+}
