@@ -13,20 +13,11 @@ describe('Form component', () => {
   const formInstance = wrapper.instance();
 
   it('updates this.data when any of the inputs change', () => {
-    const mockEvent = {
-      target: {
-        value: '1',
-      },
-    };
-
-    wrapper.find(TextInput).simulate('change', mockEvent);
+    wrapper.find(TextInput).simulate('change', 'number', '1');
     expect(formInstance.data.number).toBe('1');
   });
 
-
-  it('validates data and enables start button if the data is accurate', () => {
-    expect(wrapper.find(Button).props().disabled).toBe(true);
-
+  it('validates data', () => {
     formInstance.data = {
       number: '1',
       diffculty: 'easy',
@@ -34,18 +25,17 @@ describe('Form component', () => {
       category: 'music',
     };
 
-    expect(wrapper.find(Button).props().disabled).toBe(false);
+    formInstance.validate();
+    expect(formInstance.state.validated).toBe(true);
+  });
+
+  it('shows quizzes component when button is clicked', () => {
+    wrapper.find(Button).simulate('click');
+    expect(wrapper.find(Quizzes).length).toBe(1);
   });
 
   it('clears data when this.clearData is called', () => {
     formInstance.clearData();
     expect(formInstance.data).toEqual({});
   });
-
-  it('shows quizzes component when button is clicked', () => {
-    wrapper.find(Button).simulate('click');
-
-    expect(wrapper.find(Quizzes).length).toBe(1);
-  });
 });
-

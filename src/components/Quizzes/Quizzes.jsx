@@ -14,9 +14,9 @@ type State = {
 }
 
 export default class Quizzes extends React.Component<Props, State> {
-    render() {
-        return (
-            <h1>quizzes place  holder</h1>
-        )
-    }
+  render() {
+    return (
+      <h1>quizzes place  holder</h1>
+    );
+  }
 }

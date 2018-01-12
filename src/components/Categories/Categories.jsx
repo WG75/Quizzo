@@ -18,7 +18,7 @@ type State = {
 
 export default class Categories extends React.Component<Props, State> {
   state = {
-    selected: ''
+    selected: '',
   };
 
   handleChange(id: string, value: string) {
@@ -60,8 +60,8 @@ export default class Categories extends React.Component<Props, State> {
               className={classes.extraCategories}
               options={extraCategories}
               id="category"
-              onChange={(id: string, value: string) =>
-                this.handleChange(id, value)
+              onChange={(Id: string, value: string) =>
+                this.handleChange(Id, value)
               }
             />
           ) : null}
