@@ -6,7 +6,8 @@ import classes from './text-input.scss';
 type Props = {
     id: string,
     onChange: (id: string, value: string) => void,
-    label: string
+    label: string,
+    type: string
 }
 
 type State = {
@@ -14,6 +15,11 @@ type State = {
 }
 
 export default class TextInput extends React.Component<Props, State> {
+
+    static defaultProps = {
+      type: 'text',
+    }
+
     state = {
       value: '',
     }
@@ -28,12 +34,12 @@ export default class TextInput extends React.Component<Props, State> {
 
 
     render() {
-      const { id, label } : Props = this.props;
+      const { id, label, type } : Props = this.props;
 
       return (
         <label className={classes.textInputWrapper} htmlFor={id}>
           <span className={classes.label}>{label}:</span>
-          <input className={classes.textInput} type="text" id={id} name={id} value={this.state.value} onChange={e => this.handleChange(e)} />
+          <input className={classes.textInput} type={type} id={id} name={id} value={this.state.value} onChange={e => this.handleChange(e)} />
         </label>
       );
     }

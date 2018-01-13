@@ -31,7 +31,10 @@ export default class Form extends React.Component<Props, State> {
     showQuizzes: false,
   };
 
-  data: FormData;
+  data: FormData = {
+    type: 'any',
+    diffculty: 'easy'
+  };
 
   validate() {
     const {
@@ -39,6 +42,7 @@ export default class Form extends React.Component<Props, State> {
     }: FormData = this.data;
 
     if (number && diffculty && type && category) {
+
       if (!this.state.validated) {
         this.setState({
           validated: true,
@@ -80,11 +84,12 @@ export default class Form extends React.Component<Props, State> {
           id="number"
           onChange={this.handleChange.bind(this)}
           label="number of questions"
+          type="number"
         />
 
         <Categories
-          id="catagory"
-          onChange={this.handleChange}
+          id="category"
+          onChange={this.handleChange.bind(this)}
           options={categoriesData}
           extraCategories={['extra1', 'extra2', 'extra3']}
         />
@@ -94,7 +99,7 @@ export default class Form extends React.Component<Props, State> {
           <RadioButtons
             className={classes.typeWrapper}
             id="type"
-            onChange={this.handleChange}
+            onChange={this.handleChange.bind(this)}
             options={['true', 'multiple', 'any']}
             Label={QuestionType}
             labelClass={classes.labelClass}
@@ -107,7 +112,7 @@ export default class Form extends React.Component<Props, State> {
           <Select
             className={classes.diffcultyWrapper}
             id="diffculty"
-            onChange={this.handleChange}
+            onChange={this.handleChange.bind(this)}
             options={['easy', 'hard', 'medium']}
             defaultSelected={0}
           />
