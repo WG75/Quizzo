@@ -9,7 +9,8 @@ type Props = {
   options: Array<{ value: string, icon: string }>,
   extraCategories: Array<string>,
   onChange: (id: string, value: string) => void,
-  id: string
+  id: string,
+  className: string
 };
 
 type State = {
@@ -30,11 +31,14 @@ export default class Categories extends React.Component<Props, State> {
   }
 
   render() {
-    const { options, extraCategories, id } = this.props;
+    const {
+      options, extraCategories, id, className,
+    } = this.props;
 
     return (
-      <div className={classes.fieldWrapper}>
-        <span className={classes.fieldLabel}>{id}</span>
+      <div className={`${classes.fieldWrappe} ${className}`}>
+        <span className={classes.fieldLabel}>{id}:</span>
+
         <div className={classes.categories}>
           <div className={classes.categoriesWrapper}>
             {options.map(category => (

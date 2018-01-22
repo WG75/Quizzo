@@ -1,12 +1,12 @@
 // @flow
 
 import React from 'react';
-import TextInput from '../../components/TextInput/TextInput';
 import RadioButtons from '../../components/RadioButtons/RadioButtons';
 import QuestionType from '../../components/QuestionType/QuestionType';
 import Categories from '../../components/Categories/Categories';
 import categoriesData from '../../data/categories';
 import Select from '../../components/SelectMenu/SelectMenu';
+import TextInput from '../../components/TextInput/TextInput';
 import Button from '../../components/Button/Button';
 import Quizzes from '../../components/Quizzes/Quizzes';
 import classes from './form.scss';
@@ -33,7 +33,7 @@ export default class Form extends React.Component<Props, State> {
 
   data: FormData = {
     type: 'any',
-    diffculty: 'easy'
+    diffculty: 'easy',
   };
 
   validate() {
@@ -42,7 +42,6 @@ export default class Form extends React.Component<Props, State> {
     }: FormData = this.data;
 
     if (number && diffculty && type && category) {
-
       if (!this.state.validated) {
         this.setState({
           validated: true,
@@ -79,20 +78,27 @@ export default class Form extends React.Component<Props, State> {
 
   render() {
     return !this.state.showQuizzes ? (
-      <form>
+      <form className={classes.form}>
+        <h3 className={classes.heading}>what question you wanna get asked?</h3>
+
         <TextInput
+          className={classes.fieldWrapper}
           id="number"
           onChange={this.handleChange.bind(this)}
           label="number of questions"
           type="number"
         />
 
-        <Categories
-          id="category"
-          onChange={this.handleChange.bind(this)}
-          options={categoriesData}
-          extraCategories={['extra1', 'extra2', 'extra3']}
-        />
+        <div className={classes.fieldWrapper}>
+          <span className={classes.fieldLabel}>diffculty:</span>
+          <Select
+            className={classes.diffcultyWrapper}
+            id="diffculty"
+            onChange={this.handleChange.bind(this)}
+            options={['easy', 'hard', 'medium']}
+            defaultSelected={0}
+          />
+        </div>
 
         <div className={classes.fieldWrapper}>
           <span className={classes.fieldLabel}>type:</span>
@@ -107,18 +113,16 @@ export default class Form extends React.Component<Props, State> {
           />
         </div>
 
-        <div className={classes.fieldWrapper}>
-          <span className={classes.fieldLabel}>diffculty:</span>
-          <Select
-            className={classes.diffcultyWrapper}
-            id="diffculty"
-            onChange={this.handleChange.bind(this)}
-            options={['easy', 'hard', 'medium']}
-            defaultSelected={0}
-          />
-        </div>
+        <Categories
+          className={classes.fieldWrapper}
+          id="category"
+          onChange={this.handleChange.bind(this)}
+          options={categoriesData}
+          extraCategories={['extra1', 'extra2', 'extra3']}
+        />
 
         <Button
+          className={classes.button}
           disabled={!this.state.validated}
           onClick={() => {
             this.handleSubmit();

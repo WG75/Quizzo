@@ -2,14 +2,27 @@
 @import '../../styles/typo.scss';
 
 .categories {
+  @media screen and (min-width: $breakpoint-md) {
+    width: 100%;
+  }
 }
 
 .categoriesWrapper {
   text-align: center;
   margin: 0 -16px 18px;
+
+  @media screen and (max-width: 639px) {
+    width: 300px;
+    margin: 0 auto;
+  }
 }
 
 .extraCategories {
   margin: 0 auto;
   width: 268px;
+  display: block;
+}
+
+.fieldLabel {
+  composes: label from '../TextInput/text-input.scss';
 }

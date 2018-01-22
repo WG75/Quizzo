@@ -8,7 +8,7 @@ import TextInput from './TextInput';
 describe('TextInput component', () => {
   const onChangeMockFun = jest.fn();
 
-  const wrapper = Enzyme.shallow(<TextInput id="name" onChange={onChangeMockFun} label="username" />);
+  const wrapper = Enzyme.shallow(<TextInput className="number" id="name" onChange={onChangeMockFun} label="username" />);
 
   it('render input element and pass props to it', () => {
     expect(wrapper.find('input').length).toBe(1);

@@ -1,42 +1,40 @@
-@import "../../styles/variables.scss";
-@import "../../styles/typo.scss";
+@import '../../styles/variables.scss';
+@import '../../styles/typo.scss';
 
-.label, .textInput {
-    display: block;
-    @media screen and (min-width: $breakpoint-md) {
-        display: inline-block;
-    }
+.textInputWrapper {
+  display: block;
 }
 
 .label {
-    font-size: 14px;
-    text-decoration: underline;
-    text-transform: uppercase;
-    color: $secondary-dark;
-    margin-bottom: 14px;
-
-    @media screen and (min-width: $breakpoint-md) {
-        margin-right: 10px;
-    }
-
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: $secondary-dark;
+  margin-bottom: 14px;
+  width: 160px;
+  @media screen and (min-width: 640px) {
+    margin-right: 10px;
+  }
 }
 
 .textInput {
-    @include Roboto-bold;
-    font-size: 16px;
-    line-height: 2;
-    background: $tertiary-dark;
-    color: $primary-light;
-    height: 32px;
-    border: 1px solid $tertiary;
-    padding-left:7px;
-    width: 278px;
-    &:focus {
-        border-color: $secondary-dark;
-    }
+  @include Roboto-bold;
+  font-size: 16px;
+  line-height: 2;
+  background: $tertiary-dark;
+  color: $primary-light;
+  height: 32px;
+  border: 1px solid $tertiary;
+  padding-left: 7px;
+  display: inline-block;
+  width: 100%;
 
-    @media screen and (min-width: $breakpoint-md) {
-        width: 70% //tempo;
-    }
+  &:focus {
+    border-color: $secondary-dark;
+  }
 
+  @media screen and (min-width: 640px) {
+    width: calc(100% - 170px);
+  }
 }
