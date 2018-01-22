@@ -10,11 +10,12 @@ type props = {
   onClick: () => void,
   isLink: boolean,
   path: string,
-  children: Node
+  children: Node,
+  disabled: boolean
 };
 
 const Button = ({
-  className, onClick, isLink, path, children,
+  className, onClick, isLink, path, children, disabled,
 }: props) =>
   (isLink ? (
     <Link
@@ -24,7 +25,7 @@ const Button = ({
       {children}
     </Link>
   ) : (
-    <button className={`${classes.primary} ${className}`} onClick={onClick}>
+    <button disabled={disabled} className={`${classes.primary} ${className}`} onClick={onClick} type="button">
       {children}
     </button>
   ));
@@ -34,6 +35,7 @@ Button.defaultProps = {
   isLink: false,
   path: '/',
   onClick: () => undefined,
+  disabled: false,
 };
 
 export default Button;

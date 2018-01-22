@@ -16,6 +16,7 @@ describe('Categories component', () => {
   const onChangeMock = jest.fn();
 
   const wrapper = Enzyme.shallow(<Categories
+    className="category"
     options={categoriesOpt}
     extraCategories={extraOptions}
     onChange={onChangeMock}

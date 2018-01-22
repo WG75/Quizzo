@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+@import '../../styles/typo.scss';
+
+.form {
+  margin: 0 20px;
+  @media screen and (min-width: $breakpoint-md) {
+    width: 580px;
+    margin: 54px auto 20px;
+    background: rgba($black, 0.1);
+    padding: 10px 20px;
+    border: 1px solid $secondary-dark;
+  }
+}
+
+.heading {
+  color: $white;
+  text-align: center;
+  margin: 20px 0 30px;
+}
+
+.fieldLabel {
+  composes: label from '../../components/TextInput/text-input.scss';
+}
+
+.fieldWrapper {
+  margin-bottom: 18px;
+}
+
+.typeWrapper {
+  @media screen and (min-width: 640px) {
+    display: inline-block;
+    width: calc(100% - 170px);
+  }
+}
+
+.button {
+  display: block;
+  margin: 30px auto;
+
+  &:disabled {
+    background: darken($tertiary-dark, 25%);
+    border-color: $primary;
+    color: $primary;
+    cursor: not-allowed;
+  }
+}
